@@ -1,0 +1,35 @@
+<Candy>
+  <CandyItem id="1" type="chocolate" filling="true">
+    <Name>ChocoDelight</Name>
+    <Energy>250</Energy>
+    <Ingredients>
+      <Ingredient>Water</Ingredient>
+      <Ingredient>Sugar 100mg</Ingredient>
+      <Ingredient>Fructose 50mg</Ingredient>
+      <Ingredient>Dark Chocolate</Ingredient>
+      <Ingredient>Vanilin 5mg</Ingredient>
+    </Ingredients>
+    <Value>
+      <Proteins>2.5</Proteins>
+      <Fats>15</Fats>
+      <Carbohydrates>30</Carbohydrates>
+    </Value>
+    <Production>SweetFactory</Production>
+  </CandyItem>
+
+  <CandyItem id="2" type="caramel" filling="false">
+    <Name>CaramelDream</Name>
+    <Energy>150</Energy>
+    <Ingredients>
+      <Ingredient>Water</Ingredient>
+      <Ingredient>Sugar 120mg</Ingredient>
+      <Ingredient>Fructose 60mg</Ingredient>
+    </Ingredients>
+    <Value>
+      <Proteins>1</Proteins>
+      <Fats>0.5</Fats>
+      <Carbohydrates>40</Carbohydrates>
+    </Value>
+    <Production>CaramelKing</Production>
+  </CandyItem>
+</Candy>
