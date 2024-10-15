@@ -11,7 +11,7 @@ import org.w3c.dom.*;
 import com.ooplab2.CandyItem;
 
 
-public class DOMParser {
+public class domParser {
   public static List<CandyItem> parseCandy(String xmlFile) {
     List<CandyItem> candyList = new ArrayList<>();
     try {
@@ -50,7 +50,7 @@ public class DOMParser {
           candy.setCarbohydrates(Float.parseFloat(element.getElementsByTagName("Carbohydrates").item(0).getTextContent()));
           candy.setProduction(element.getElementsByTagName("Production").item(0).getTextContent());
 
-          System.out.println(candy);
+          //System.out.println(candy);
 
           candyList.add(candy);
         }

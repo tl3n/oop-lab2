@@ -76,6 +76,6 @@ public class CandyItem {
   }
 
   public String toString() {
-    return this.id + this.name + this.energy + this.type + this.proteins + this.fats + this.carbohydrates;
+    return this.id + ' ' + this.name + ' ' + this.energy + ' ' + this.type + ' ' + this.proteins + ' ' + this.fats + ' ' + this.carbohydrates + ' ' + this.production;
   }
 }
