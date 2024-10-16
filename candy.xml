@@ -1,5 +1,5 @@
 <Candy>
-  <CandyItem id="1" type="chocolate" filling="true">
+  <CandyItem id="c1" type="chocolate" filling="true">
     <Name>ChocoDelight</Name>
     <Energy>250</Energy>
     <Ingredients>
@@ -17,7 +17,7 @@
     <Production>SweetFactory</Production>
   </CandyItem>
 
-  <CandyItem id="2" type="caramel" filling="false">
+  <CandyItem id="c2" type="caramel" filling="false">
     <Name>CaramelDream</Name>
     <Energy>150</Energy>
     <Ingredients>
