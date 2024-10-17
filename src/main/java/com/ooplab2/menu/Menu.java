@@ -3,18 +3,20 @@ package com.ooplab2.menu;
 import com.ooplab2.parsers.*;
 import com.ooplab2.transform.xslTransformer;
 import com.ooplab2.CandyItem;
+import com.ooplab2.comparator.CandyComparators;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import com.ooplab2.validation.xmlValidator;
-import com.ooplab2.transform.xslTransformer;
 
-public class MainMenu {
+public class Menu {
   private InputReader inputReader;
   private String xmlFilePath;
   private String xsdFilePath;
   List<CandyItem> candyList;
 
-  public MainMenu() {
+  public Menu() {
     this.inputReader = new InputReader();
     this.xmlFilePath = getClass().getClassLoader().getResource("candy.xml").getPath();
     this.xsdFilePath = getClass().getClassLoader().getResource("candy.xsd").getPath();
@@ -29,11 +31,15 @@ public class MainMenu {
     }
     System.out.println("XML validated successfully!");
 
-    while (true) {
-      String options = "\n1. Parse" +
-          "\n2. Transform using XSL" +
-          "\n3. Print candy list" +
-          "\n0. Exit\n";
+    String options = "\n1. Parse" +
+        "\n2. Transform using XSL" +
+        "\n3. Print candy list" +
+        "\n4. Sort candy list" +
+        "\n0. Exit\n";
+
+
+      clearConsole();
+      while (true) {
       System.out.println(options);
 
       int choice = inputReader.readInt();
@@ -49,11 +55,21 @@ public class MainMenu {
           break;
         case 3:
           if (candyList.size() == 0) {
-            System.out.println("First, parse the candy!");
+            System.out.println("Candy list is empty!");
             break;
           }
           candyList.forEach(candy -> System.out.println(candy + "\n"));
           break;
+        case 4:
+          if (candyList.size() == 0) {
+            break;
+          }
+          int sortChoice = inputReader.readInt();
+          this.sortOptions(sortChoice);
+          break;
+        case 0:
+          System.out.println("Closing...");
+          System.exit(0);
         default:
           break;
       }
@@ -61,6 +77,7 @@ public class MainMenu {
   }
 
   private void printOptions(int choice) {
+    clearConsole();
     String options = "";
     switch (choice) {
       case 1:
@@ -77,6 +94,15 @@ public class MainMenu {
             "\n3. Production" +
             "\n4. Return\n";
         break;
+      case 4:
+        if (candyList.size() == 0) {
+          System.out.println("Candy list is empty!");
+          break;
+        }
+        options = "\nSort by:" +
+            "\n1. Name" +
+            "\n2. Energy" +
+            "\n3. Production";
       default:
         break;
     }
@@ -115,6 +141,8 @@ public class MainMenu {
         }
         System.out.println("Parsed successfully");
         break;
+      case 4:
+        break;
       default:
         break;
     }
@@ -136,9 +164,16 @@ public class MainMenu {
         text = "production";
         xslFilePath = getClass().getClassLoader().getResource("byProduction.xsl").getPath();
         break;
+      case 4:
+        break;
+      default:
+        break;
     }
-    System.out.println("Transforming by " + text + "...");
-    this.transform(xmlFilePath, xslFilePath);
+    if (text != "") {
+      System.out.println("Transforming by " + text + "...");
+      this.transform(xmlFilePath, xslFilePath);
+    }
+
   }
 
   private void transform(String xmlFilePath, String xslFilePath) {
@@ -148,5 +183,31 @@ public class MainMenu {
     } else {
       System.out.println("Transformed successfully. File can be found at " + outputXMLFilePath);
     }
+  }
+
+  private void sortOptions(int choice) {
+    String text = "";
+    switch (choice) {
+      case 1:
+        text = "name";
+         Collections.sort(candyList, CandyComparators.byName());
+         break;
+      case 2:
+        text = "energy";
+        Collections.sort(candyList, CandyComparators.byEnergy());
+        break;
+      case 3:
+        text = "produciton";
+        Collections.sort(candyList, CandyComparators.byProduction());
+        break;
+      default:
+        break;
+      }
+    System.out.println("Sorting by " + text + "...");
+  }
+
+  private void clearConsole() {
+    System.out.print("\033[H\033[2J");
+    System.out.flush();
   }
 }

@@ -2,6 +2,7 @@ package com.ooplab2;
 
 import java.util.List;
 
+
 public class CandyItem {
   private String id;
   private String name;
@@ -75,7 +76,23 @@ public class CandyItem {
     this.production = production;
   }
 
+  @Override
   public String toString() {
-    return this.id + ' ' + this.name + ' ' + this.energy + ' ' + this.type + ' ' + this.proteins + ' ' + this.fats + ' ' + this.carbohydrates + ' ' + this.production;
+    String ingredients = "";
+    for (String ingredient : this.ingredients) {
+      ingredients += "\n\t* " + ingredient;
+    }
+
+    return
+    this.name + ": " +
+    "\n- ID: " + this.id +
+    "\n- Energy: " + this.energy +
+    "\n- Type: " + this.type +
+    "\n- Filling: " + this.filling +
+    "\n- Ingredients: " + ingredients +
+    "\n- Proteins: " + this.proteins +
+    "\n- Fats: " + this.fats +
+    "\n- Carbohydrates: " + this.carbohydrates +
+    "\n- Production: " + this.production;
   }
 }
