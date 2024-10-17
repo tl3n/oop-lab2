@@ -8,7 +8,7 @@ import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
 public class xslTransformer {
-  public static void transform(String xmlFilePath, String xslFilePath) {
+  public static String transform(String xmlFilePath, String xslFilePath) {
     try {
       File xmlFile = new File(xmlFilePath);
       File xslFile = new File(xslFilePath);
@@ -25,9 +25,10 @@ public class xslTransformer {
 
       transformer.transform(xmlSource, result);
 
-      System.out.println("Transformation has gone successfully. Transformed file saved as: " + outputXML.getPath());
+      return outputXML.getPath();
     } catch (Exception e) {
       e.printStackTrace();
+      return null;
     }
   }
 }

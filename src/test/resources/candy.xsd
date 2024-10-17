@@ -1,0 +1,44 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Candy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CandyItem" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" type="xs:string" />
+              <xs:element name="Energy" type="xs:positiveInteger" />
+              <xs:element name="Ingredients">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Ingredient" type="xs:string" maxOccurs="unbounded" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Value">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Proteins" type="xs:decimal" />
+                    <xs:element name="Fats" type="xs:decimal" />
+                    <xs:element name="Carbohydrates" type="xs:decimal" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Production" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="required" />
+            <xs:attribute name="type" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="chocolate" />
+                  <xs:enumeration value="caramel" />
+                  <xs:enumeration value="iris" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="filling" type="xs:boolean" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
