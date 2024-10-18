@@ -33,6 +33,95 @@
             <Production>SweetFactory</Production>
               
         </CandyItem>
+        <CandyItem id="c4" type="chocolate" filling="false">
+                
+            <Name>DarkBite</Name>
+                
+            <Energy>300</Energy>
+                
+            <Ingredients>
+                      
+                <Ingredient>Water</Ingredient>
+                      
+                <Ingredient>Sugar 50mg</Ingredient>
+                      
+                <Ingredient>Dark Chocolate</Ingredient>
+                    
+            </Ingredients>
+                
+            <Value>
+                      
+                <Proteins>3.0</Proteins>
+                      
+                <Fats>20</Fats>
+                      
+                <Carbohydrates>25</Carbohydrates>
+                    
+            </Value>
+                
+            <Production>ChocoFactory</Production>
+              
+        </CandyItem>
+        <CandyItem id="c6" type="chocolate" filling="true">
+                
+            <Name>MilkChoco</Name>
+                
+            <Energy>270</Energy>
+                
+            <Ingredients>
+                      
+                <Ingredient>Milk</Ingredient>
+                      
+                <Ingredient>Sugar 120mg</Ingredient>
+                      
+                <Ingredient>Milk Chocolate</Ingredient>
+                    
+            </Ingredients>
+                
+            <Value>
+                      
+                <Proteins>3.5</Proteins>
+                      
+                <Fats>18</Fats>
+                      
+                <Carbohydrates>35</Carbohydrates>
+                    
+            </Value>
+                
+            <Production>SweetFactory</Production>
+              
+        </CandyItem>
+        <CandyItem id="c8" type="chocolate" filling="false">
+                
+            <Name>WhiteDelight</Name>
+                
+            <Energy>290</Energy>
+                
+            <Ingredients>
+                      
+                <Ingredient>Water</Ingredient>
+                      
+                <Ingredient>Sugar 100mg</Ingredient>
+                      
+                <Ingredient>White Chocolate</Ingredient>
+                      
+                <Ingredient>Vanilin 3mg</Ingredient>
+                    
+            </Ingredients>
+                
+            <Value>
+                      
+                <Proteins>2.8</Proteins>
+                      
+                <Fats>15</Fats>
+                      
+                <Carbohydrates>35</Carbohydrates>
+                    
+            </Value>
+                
+            <Production>ChocoFactory</Production>
+              
+        </CandyItem>
     </chocolate>
     <caramel>
         <CandyItem id="c2" type="caramel" filling="false">
@@ -53,7 +142,7 @@
                 
             <Value>
                       
-                <Proteins>1</Proteins>
+                <Proteins>1.0</Proteins>
                       
                 <Fats>0.5</Fats>
                       
@@ -64,5 +153,154 @@
             <Production>CaramelKing</Production>
               
         </CandyItem>
+        <CandyItem id="c5" type="caramel" filling="true">
+                
+            <Name>SoftCaramel</Name>
+                
+            <Energy>220</Energy>
+                
+            <Ingredients>
+                      
+                <Ingredient>Water</Ingredient>
+                      
+                <Ingredient>Sugar 100mg</Ingredient>
+                      
+                <Ingredient>Fructose 70mg</Ingredient>
+                      
+                <Ingredient>Caramel</Ingredient>
+                    
+            </Ingredients>
+                
+            <Value>
+                      
+                <Proteins>2.0</Proteins>
+                      
+                <Fats>3.0</Fats>
+                      
+                <Carbohydrates>50</Carbohydrates>
+                    
+            </Value>
+                
+            <Production>CaramelKing</Production>
+              
+        </CandyItem>
+        <CandyItem id="c9" type="caramel" filling="false">
+                
+            <Name>CaramelBurst</Name>
+                
+            <Energy>180</Energy>
+                
+            <Ingredients>
+                      
+                <Ingredient>Water</Ingredient>
+                      
+                <Ingredient>Sugar 90mg</Ingredient>
+                      
+                <Ingredient>Fructose 30mg</Ingredient>
+                    
+            </Ingredients>
+                
+            <Value>
+                      
+                <Proteins>1.5</Proteins>
+                      
+                <Fats>0.8</Fats>
+                      
+                <Carbohydrates>40</Carbohydrates>
+                    
+            </Value>
+                
+            <Production>CaramelKing</Production>
+              
+        </CandyItem>
     </caramel>
+    <iris>
+        <CandyItem id="c3" type="iris" filling="false">
+                
+            <Name>IrisToffee</Name>
+                
+            <Energy>180</Energy>
+                
+            <Ingredients>
+                      
+                <Ingredient>Water</Ingredient>
+                      
+                <Ingredient>Sugar 80mg</Ingredient>
+                      
+                <Ingredient>Fructose 30mg</Ingredient>
+                    
+            </Ingredients>
+                
+            <Value>
+                      
+                <Proteins>1.5</Proteins>
+                      
+                <Fats>1.0</Fats>
+                      
+                <Carbohydrates>50</Carbohydrates>
+                    
+            </Value>
+                
+            <Production>IrisFactory</Production>
+              
+        </CandyItem>
+        <CandyItem id="c7" type="iris" filling="false">
+                
+            <Name>GoldenIris</Name>
+                
+            <Energy>200</Energy>
+                
+            <Ingredients>
+                      
+                <Ingredient>Water</Ingredient>
+                      
+                <Ingredient>Sugar 100mg</Ingredient>
+                      
+                <Ingredient>Fructose 50mg</Ingredient>
+                    
+            </Ingredients>
+                
+            <Value>
+                      
+                <Proteins>1.0</Proteins>
+                      
+                <Fats>2.0</Fats>
+                      
+                <Carbohydrates>45</Carbohydrates>
+                    
+            </Value>
+                
+            <Production>IrisFactory</Production>
+              
+        </CandyItem>
+        <CandyItem id="c10" type="iris" filling="true">
+                
+            <Name>IrisCandy</Name>
+                
+            <Energy>230</Energy>
+                
+            <Ingredients>
+                      
+                <Ingredient>Water</Ingredient>
+                      
+                <Ingredient>Sugar 110mg</Ingredient>
+                      
+                <Ingredient>Fructose 50mg</Ingredient>
+                    
+            </Ingredients>
+                
+            <Value>
+                      
+                <Proteins>1.8</Proteins>
+                      
+                <Fats>3.5</Fats>
+                      
+                <Carbohydrates>48</Carbohydrates>
+                    
+            </Value>
+                
+            <Production>IrisFactory</Production>
+              
+        </CandyItem>
+    </iris>
 </root>

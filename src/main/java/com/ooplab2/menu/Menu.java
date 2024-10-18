@@ -38,7 +38,6 @@ public class Menu {
         "\n0. Exit\n";
 
 
-      clearConsole();
       while (true) {
       System.out.println(options);
 
@@ -77,7 +76,6 @@ public class Menu {
   }
 
   private void printOptions(int choice) {
-    clearConsole();
     String options = "";
     switch (choice) {
       case 1:
@@ -204,10 +202,5 @@ public class Menu {
         break;
       }
     System.out.println("Sorting by " + text + "...");
-  }
-
-  private void clearConsole() {
-    System.out.print("\033[H\033[2J");
-    System.out.flush();
   }
 }

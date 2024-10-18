@@ -15,6 +15,15 @@ public class CandyItem {
   private float carbohydrates;
   private String production;
 
+  public CandyItem(){}
+
+  public CandyItem(String id, String name, int energy, String production) {
+    this.id = id;
+    this.name = name;
+    this.energy = energy;
+    this.production = production;
+  }
+
   public String getId() {
     return id;
   }
